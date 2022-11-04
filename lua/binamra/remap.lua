@@ -37,14 +37,68 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
+-- Move text up and down
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>==g", opts)
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>==g", opts)
+
+
 -- Plugins --
 -- Telescope --
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+keymap("n", "<leader>fm", "<cmd>Telescope media_files<CR>", opts)
+
+-- Nvim Tree --
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
+
+-- Toggle Term --
+keymap("n", "<leader>tt", "<cmd>ToggleTerm<CR>", opts)
+
 
 -- Insert --
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
+
+-- Term --
+keymap('t', '<esc>', [[<C-\><C-n>]], opts)
+keymap('t', 'jk', [[<C-\><C-n>]], opts)
+
+-- Move out Toggle Term --
+keymap('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+keymap('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+keymap('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+keymap('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+
+vim.api.nvim_create_user_command("OpenTerminal", function()
+	local value = vim.fn.input "Terminal number: "
+	vim.cmd(":ToggleTerm "..value)
+end, {})
+
+keymap("n", "tt", ":OpenTerminal <CR>", opts)
+
+-- Buffer --
+-- Navigate buffers
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+
+-- Visual --
+-- Move text up and down
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "p", '"_dP', opts)
+
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
+
+
+-- Visual Block --
+-- Move text up and down
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
