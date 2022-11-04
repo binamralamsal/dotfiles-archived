@@ -54,7 +54,7 @@ keymap("n", "<leader>fm", "<cmd>Telescope media_files<CR>", opts)
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- Toggle Term --
-keymap("n", "<leader>tt", "<cmd>ToggleTerm<CR>", opts)
+keymap("n", "td", "<cmd>ToggleTerm<CR>", opts)
 
 
 -- Insert --
@@ -71,6 +71,7 @@ keymap('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
 keymap('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
 keymap('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
 keymap('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+keymap('t', '<C-w>', "<Cmd>q<CR>", opts)
 
 vim.api.nvim_create_user_command("OpenTerminal", function()
 	local value = vim.fn.input "Terminal number: "
@@ -83,6 +84,7 @@ keymap("n", "tt", ":OpenTerminal <CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>w", ":bdelete<CR>:bnext<CR>", opts)
 
 
 -- Visual --
