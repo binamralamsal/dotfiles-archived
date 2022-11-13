@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
 	use "williamboman/mason.nvim"
 	use 'williamboman/mason-lspconfig.nvim'
 	use "b0o/schemastore.nvim"
+	use "jose-elias-alvarez/null-ls.nvim"
 
 end)
 

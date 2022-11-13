@@ -1,5 +1,8 @@
 vim.g.neoformat_try_node_exe = 1
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-	command = "Neoformat"
+	--  command = "Neoformat"
+	callback = function()
+		vim.lsp.buf.format()
+	end
 })
