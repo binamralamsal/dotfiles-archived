@@ -56,11 +56,17 @@ keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 -- Toggle Term --
 keymap("n", "td", "<cmd>ToggleTerm<CR>", opts)
 
+-- Tagbar --
+keymap("n", "<leader>gh", "<cmd>TagbarToggle<CR>", opts)
+
 
 -- Insert --
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
+
+-- Ctrl + Backspace --
+keymap("i", "<C-Backspace", "<C-W>", opts)
 
 -- Term --
 keymap('t', '<esc>', [[<C-\><C-n>]], opts)
@@ -84,7 +90,7 @@ keymap("n", "tt", ":OpenTerminal <CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<leader>w", ":bdelete<CR>:bnext<CR>", opts)
+keymap("n", "<leader>q", ":bdelete<CR>:bnext<CR>", opts)
 
 
 -- Visual --

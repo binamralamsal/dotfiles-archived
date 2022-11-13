@@ -20,11 +20,26 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-web-devicons' -- Icon for Nvim tree
 	use 'nvim-tree/nvim-tree.lua' -- File explorer viewer
 	use 'winston0410/commented.nvim' -- Provides a way to comment lines easily
+	use 'JoosepAlviste/nvim-ts-context-commentstring'
 	use 'jiangmiao/auto-pairs' -- Helps to complete brackets, quotes, etc.
 	use 'akinsho/toggleterm.nvim' -- Terminal for Neovim
 	use 'kyazdani42/nvim-web-devicons' -- Icons required by lua line
 	use 'nvim-lualine/lualine.nvim' -- Beautiful lualine
 	use 'akinsho/bufferline.nvim' -- Buffer line like tabs
+	use 'yamatsum/nvim-cursorline'
+	use 'preservim/tagbar'
+	use 'glepnir/dashboard-nvim'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-nvim-lua'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+	use 'L3MON4D3/LuaSnip'
+	use 'rafamadriz/friendly-snippets'
+	use "williamboman/mason.nvim"
+	use 'williamboman/mason-lspconfig.nvim'
+	use "b0o/schemastore.nvim"
 
 end)
 
