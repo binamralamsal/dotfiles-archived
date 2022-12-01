@@ -13,5 +13,8 @@ configs.setup({
 	autopairs = {
 		enable = true,
 	},
-	-- indent = { enable = true, disable = { "python", "css" } },
+	autotag = {
+		enable = true,
+	},
+	indent = { enable = true, disable = { "python", "html", "css" } },
 })

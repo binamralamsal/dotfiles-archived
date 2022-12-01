@@ -15,3 +15,6 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
 vim.opt.modifiable = true
+vim.opt.expandtab = true;
+
+vim.wo.signcolumn = "yes"
