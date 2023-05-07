@@ -19,6 +19,14 @@ M.general = {
     -- Move text up and down
     ["<A-j>"] = { "<Esc>:m .+1<CR>==g", "Move text down", opts },
     ["<A-k"] = { "<Esc>:m .-2<CR>==g", "Move text up", opts },
+
+    -- Trouble.nvim
+    ["<leader>ee"] = { "<cmd>TroubleToggle<cr>", "Trouble Toggle" },
+    ["<leader>ew"] = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Trouble Toggle Workspace Diagnostics" },
+    ["<leader>ed"] = { "<cmd>TroubleToggle document_diagnostics<cr>", "Trouble Toggle Document Diagnostics" },
+    ["<leader>eq"] = { "<cmd>TroubleToggle quickfix<cr>", "Trouble Toggle Quickfixes" },
+    ["<leader>el"] = { "<cmd>TroubleToggle loclist<cr>", "Trouble Toggle loclist" },
+    ["<leader>gR"] = { "<cmd>TroubleToggle lsp_references<cr>", "Trouble Toggle LSP References" },
   },
 }
 
