@@ -7,4 +7,3 @@
 -- })
 
 vim.wo.relativenumber = true
-
