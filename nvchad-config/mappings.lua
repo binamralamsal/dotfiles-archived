@@ -27,6 +27,8 @@ M.general = {
     ["<leader>eq"] = { "<cmd>TroubleToggle quickfix<cr>", "Trouble Toggle Quickfixes" },
     ["<leader>el"] = { "<cmd>TroubleToggle loclist<cr>", "Trouble Toggle loclist" },
     ["<leader>gR"] = { "<cmd>TroubleToggle lsp_references<cr>", "Trouble Toggle LSP References" },
+
+    ["<C-m>"] = {"<cmd>NnnPicker %:p:h<CR>", "NnnPicker"}
   },
 }
 

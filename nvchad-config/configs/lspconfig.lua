@@ -14,22 +14,6 @@ for _, lsp in ipairs(servers) do
 end
 
 lspconfig.emmet_ls.setup {
-  -- on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = {
-    "css",
-    "eruby",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "less",
-    "sass",
-    "scss",
-    "svelte",
-    "pug",
-    "typescriptreact",
-    "vue",
-  },
   init_options = {
     html = {
       options = {
@@ -40,11 +24,20 @@ lspconfig.emmet_ls.setup {
   },
 }
 
+-- npm i -g vscode-langservers-extracted
+
 lspconfig.jsonls.setup {
+  capabilities = capabilities,
+  filetypes = { "json", "jsonc" },
+  init_options = {
+    provideFormatter = true
+  },
   settings = {
     json = {
-      schemas = require('schemastore').json.schemas(),
+      schemas = require("schemastore").json.schemas(),
       validate = { enable = true },
     },
   },
 }
+
+lspconfig.tailwindcss.setup {}

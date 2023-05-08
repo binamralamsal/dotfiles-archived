@@ -115,11 +115,11 @@ local plugins = {
             ["cmp.entry.get_documentation"] = true,
           },
           hover = {
-            enabled = false
+            enabled = false,
           },
           signature = {
-            enabled = false
-          }
+            enabled = false,
+          },
         },
         -- you can enable a preset for easier configuration
         presets = {
@@ -181,6 +181,8 @@ local plugins = {
       }
     end,
   },
+
+  { "mcchrish/nnn.vim" },
 
   -- To make a plugin not be loaded
   -- {
