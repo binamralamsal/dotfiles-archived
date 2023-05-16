@@ -1,4 +1,4 @@
-local overrides = require "custom.configs.overrides"
+local overrides = require("custom.configs.overrides")
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -12,13 +12,13 @@ local plugins = {
       {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
-          require "custom.configs.null-ls"
+          require("custom.configs.null-ls")
         end,
       },
     },
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+      require("plugins.configs.lspconfig")
+      require("custom.configs.lspconfig")
     end, -- Override to setup mason-lspconfig
   },
 
@@ -90,7 +90,7 @@ local plugins = {
     "folke/trouble.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-      require("trouble").setup {}
+      require("trouble").setup({})
     end,
   },
 
@@ -168,10 +168,10 @@ local plugins = {
   {
     "rmagatti/auto-session",
     config = function()
-      require("auto-session").setup {
+      require("auto-session").setup({
         log_level = "error",
         auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-      }
+      })
     end,
   },
 
@@ -185,21 +185,6 @@ local plugins = {
   },
 
   { "ThePrimeagen/vim-be-good", cmd = "VimBeGood" },
-
-  {
-    "jackMort/ChatGPT.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("chatgpt").setup {
-        api_key_cmd = "echo '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'",
-      }
-    end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-  },
 
   {
     "kdheepak/lazygit.nvim",
