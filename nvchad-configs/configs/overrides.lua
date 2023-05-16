@@ -19,6 +19,7 @@ M.treesitter = {
     --   "python"
     -- },
   },
+  auto_install = true,
 }
 
 M.mason = {

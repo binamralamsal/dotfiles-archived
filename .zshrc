@@ -1,54 +1,58 @@
-# .bashrc
+# Created by Zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+# Load and initialise completion system
+autoload -Uz compinit
+compinit
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/binamra/.zshrc'
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+ 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		if [ -f "$rc" ]; then
-			. "$rc"
-		fi
-	done
-fi
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
 
-unset rc
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
+# starship
+eval "$(starship init zsh)"
 
 # fnm
 export PATH="/home/binamra/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
-# starship
-eval "$(starship init bash)"
-
-# zoxide
-eval "$(zoxide init bash)"
-
 # Aliases
 alias ls="exa -l --icons"
 alias cat="bat"
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
 
 # NNN CONFIG START ----
 export NNN_PLUG='f:fzopen;d:fzcd;g:gitroot;j:autojump;i:imgur;v:imgview;p:preview-tui;'
 export NNN_FIFO=/tmp/nnn.fifo nnn
 
-export PAGER="less -R"
+# export PAGER="less -R"
 
 n ()
 {
@@ -81,3 +85,17 @@ n ()
     }
 }
 # NN CONFIG END -----
+
+export PATH=$PATH:~/.local/bin
+
+# QTF fix
+export QT_QPA_PLATFORMTHEME="qt5ct"
+
+# Wayland fix
+export QT_QPA_PLATFORM=wayland
+export MOZ_ENABLE_WAYLAND=1
+export XDG_CURRENT_DESKTOP=sway
+
+export PATH=$PATH:~/.cargo/bin
+
+eval "$(github-copilot-cli alias -- "$0")"

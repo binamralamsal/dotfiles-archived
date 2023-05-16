@@ -29,12 +29,14 @@ notify_user() {
 
 # Increase Volume
 inc_volume() {
-	pamixer -i 5 && notify_user
+	# pamixer -i 5 && notify_user
+  wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+ && notify_user
 }
 
 # Decrease Volume
 dec_volume() {
-	pamixer -d 5 && notify_user
+	# pamixer -d 5 && notify_user
+  wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%- && notify_user
 }
 
 # Toggle Mute

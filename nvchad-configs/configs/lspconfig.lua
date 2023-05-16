@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd" }
+local servers = { "html", "cssls", "tsserver", "clangd", "tailwindcss", "clangd", "vuels", "dockerls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -17,20 +17,17 @@ lspconfig.emmet_ls.setup {
   init_options = {
     html = {
       options = {
-        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
         ["bem.enabled"] = true,
       },
     },
   },
 }
 
--- npm i -g vscode-langservers-extracted
-
 lspconfig.jsonls.setup {
   capabilities = capabilities,
   filetypes = { "json", "jsonc" },
   init_options = {
-    provideFormatter = true
+    provideFormatter = true,
   },
   settings = {
     json = {
@@ -40,4 +37,11 @@ lspconfig.jsonls.setup {
   },
 }
 
-lspconfig.tailwindcss.setup {}
+lspconfig.phpactor.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  init_options = {
+    language_server_phpstan = { enabled = false },
+    language_server_psalm = { enabled = false },
+  },
+}
