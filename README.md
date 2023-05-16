@@ -1,2 +1,3 @@
 # My Dotfiles
-![image](https://user-images.githubusercontent.com/61900781/236695894-03bfbf55-9d82-4527-8b44-b7b076cfa3ef.png)
+![Terminal Setup](https://github.com/binamralamsal/dotfiles/assets/61900781/8fad50be-a235-44c2-bfdf-f71051c97b3f)
+![Neovim Setup](https://github.com/binamralamsal/dotfiles/assets/61900781/2dca2029-449d-44f5-8014-b9c163dff194)
