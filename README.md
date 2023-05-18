@@ -36,6 +36,7 @@
 - [Neovim](https://github.com/neovim/neovim)
 - [Nvchad - Neovim Configuration](https://github.com/NvChad/NvChad)
 - [Lazy Git](https://github.com/jesseduffield/lazygit)
+- [Lazy NPM](https://github.com/jesseduffield/lazynpm)
 - [Lazy Docker](https://github.com/jesseduffield/lazydocker)
 
 ### Others
