@@ -28,7 +28,14 @@ M.general = {
     ["<leader>el"] = { "<cmd>TroubleToggle loclist<cr>", "Trouble Toggle loclist" },
     ["<leader>gR"] = { "<cmd>TroubleToggle lsp_references<cr>", "Trouble Toggle LSP References" },
 
-    ["<C-m>"] = {"<cmd>NnnPicker %:p:h<CR>", "NnnPicker"}
+    ["<C-m>"] = { "<cmd>NnnPicker %:p:h<CR>", "NnnPicker" },
+
+    -- Nvim Dap
+    ["<leader>nb"] = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+    ["<leader>nc"] = { "<cmd>lua require'dap'.continue()<cr>", "Continue Debugging" },
+    ["<leader>ni"] = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+    ["<leader>no"] = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+    ["<leader>nr"] = { "<cmd>lua require'dap'.repl.open()<cr>", "Open Repl" },
   },
 }
 

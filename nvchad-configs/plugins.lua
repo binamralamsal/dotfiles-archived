@@ -190,6 +190,55 @@ local plugins = {
     "kdheepak/lazygit.nvim",
     cmd = { "LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" },
   },
+
+  {
+    "NvChad/nvim-colorizer.lua",
+    opts = {
+      user_default_options = {
+        tailwind = true,
+      },
+    },
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
+    },
+
+    opts = function(_, opts)
+      opts.formatting = {
+        format = require("tailwindcss-colorizer-cmp").formatter,
+      }
+    end,
+  },
+
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "theHamsta/nvim-dap-virtual-text",
+      "rcarriga/nvim-dap-ui",
+      "mfussenegger/nvim-dap-python",
+      "nvim-telescope/telescope-dap.nvim",
+      { "leoluz/nvim-dap-go" },
+      { "jbyuki/one-small-step-for-vimkind" },
+      { "mxsdev/nvim-dap-vscode-js" },
+      {
+        "microsoft/vscode-js-debug",
+        opt = true,
+        run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+      },
+    },
+
+    config = function()
+      require("custom.dap.javascript").setup()
+    end,
+  },
+
+  {
+    "rcarriga/nvim-dap-ui",
+    config = true,
+  },
 }
 
 return plugins

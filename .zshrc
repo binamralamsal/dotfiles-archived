@@ -16,6 +16,7 @@ compinit
 alias grep='grep --color=auto'
 alias ls="exa -l --icons"
 alias cat="bat"
+alias vim="nvim"
 
 
 # Paths
@@ -50,3 +51,14 @@ export PATH=$BUN_INSTALL/bin:$PATH
 
 ## GitHub Copilot CLI
 eval "$(github-copilot-cli alias -- "$0")"
+
+# bun completions
+[ -s "/home/binamra/.bun/_bun" ] && source "/home/binamra/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="/home/binamra/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
