@@ -19,7 +19,7 @@
 - [Kitty Terminal](https://github.com/kovidgoyal/kitty)
 - [Tmux](https://github.com/tmux/tmux)
 - [Starship](https://starship.rs/)
-- [Btop - System Monitor](https://github.com/catppuccin/btop)
+- [Btop - System Monitor](https://github.com/aristocratos/btop)
 - [Neofetch](https://github.com/dylanaraps/neofetch)
 - [Exa - Modern ls](https://the.exa.website/)
 - [Ncdu - Disk Usage](https://github.com/rofl0r/ncdu)
