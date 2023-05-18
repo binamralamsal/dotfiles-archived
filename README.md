@@ -5,4 +5,7 @@
 
 ## Remaining Stuff
 
-- [btop](https://github.com/catppuccin/btop)
+- [Btop](https://github.com/catppuccin/btop)
+- [Jetbrains Mono](https://www.nerdfonts.com/font-downloads)
+- [Starship](https://starship.rs/)
+- [Exa - Modern ls](https://the.exa.website/)
