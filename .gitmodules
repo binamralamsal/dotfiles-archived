@@ -1,0 +1,3 @@
+[submodule "btop"]
+	path = btop
+	url = https://github.com/catppuccin/btop
