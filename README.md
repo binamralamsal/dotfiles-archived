@@ -30,6 +30,7 @@
 - [CPU Fetch](https://github.com/Dr-Noob/cpufetch)
 - [Speedtest](https://github.com/sivel/speedtest-cli)
 - [Lolcat](https://github.com/busyloop/lolcat)
+- [Font Preview](https://github.com/sdushantha/fontpreview)
 
 ### Development Tools
 
