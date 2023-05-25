@@ -21,7 +21,7 @@
     "pulseaudio",
     "pulseaudio#microphone",
     "tray",
-    "custom/notification",
+    //"custom/notification",
     "clock",
     "custom/power_btn"
   ],
