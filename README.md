@@ -8,7 +8,8 @@
 ### Desktop Tools
 
 - [Hyprland - Dynamic Tiling Compositor](https://github.com/hyprwm/Hyprland)
-- [Mako - Wayland Notification Daemon](https://github.com/emersion/mako)
+- [Mako - Wayland Notification Daemon](https://github.com/emersion/mako) (No longer in use)
+- [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
 - [Swaylock - Screen Locker for Wayland](https://github.com/swaywm/swaylock)
   [Waybar](https://github.com/Alexays/Waybar)
 - [Wlogout](https://github.com/ArtsyMacaw/wlogout)
