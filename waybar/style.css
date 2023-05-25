@@ -58,7 +58,10 @@ tooltip label {
 #window,
 #pulseaudio,
 #clock,
+#custom-notification,
 #tray,
+#temperature,
+#custom-power_profile,
 #battery,
 #workspaces,
 #backlight {
@@ -72,7 +75,6 @@ tooltip label {
 
 #tray,
 #custom-lock_screen,
-#temperature,
 #backlight,
 #custom-launch_wofi,
 #cpu {
