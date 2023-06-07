@@ -40,6 +40,7 @@
 - [Lazy Git](https://github.com/jesseduffield/lazygit)
 - [Lazy NPM](https://github.com/jesseduffield/lazynpm)
 - [Lazy Docker](https://github.com/jesseduffield/lazydocker)
+- [Tmuxp](https://github.com/tmux-python/tmuxp)
 
 ### Others
 
