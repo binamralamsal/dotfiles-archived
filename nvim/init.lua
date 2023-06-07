@@ -1,1 +1,2 @@
-require("binamra")
+require("config")
+require("plugins")

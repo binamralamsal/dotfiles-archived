@@ -5,9 +5,9 @@
 @define-color cc-bg rgba(0, 0, 0, 0.7);
 
 @define-color noti-border-color rgba(255, 255, 255, 0.15);
-@define-color noti-bg rgba(48, 48, 48, 0.5);
-@define-color noti-bg-hover rgba(56, 56, 56, 0.6);
-@define-color noti-bg-focus rgba(68, 68, 68, 0.6);
+@define-color noti-bg rgba(48, 48, 48, 0.8);
+@define-color noti-bg-hover rgba(56, 56, 56, 0.9);
+@define-color noti-bg-focus rgba(68, 68, 68, 0.9);
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
 

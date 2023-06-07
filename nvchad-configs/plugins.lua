@@ -240,12 +240,6 @@ local plugins = {
 			require("persistence").setup()
 		end,
 	},
-
-	{
-		"m4xshen/hardtime.nvim",
-		event = "BufEnter",
-		opts = {},
-	},
 }
 
 return plugins
