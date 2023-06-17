@@ -30,11 +30,6 @@ M.ui = {
 			"       /_-''    ''-_\\       ",
 		},
 	},
-
-	cmp = {
-		icons = true,
-		style = "default",
-	},
 }
 
 M.plugins = "custom.plugins"

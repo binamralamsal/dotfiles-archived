@@ -186,9 +186,9 @@ local plugins = {
 			},
 		},
 		opts = function(_, opts)
-			opts.formatting = {
-				format = require("tailwindcss-colorizer-cmp").formatter,
-			}
+			-- opts.formatting = {
+			-- 	format = require("tailwindcss-colorizer-cmp").formatter,
+			-- }
 			opts.sources = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },

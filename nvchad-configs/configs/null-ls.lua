@@ -22,6 +22,7 @@ local sources = {
       "typescriptreact",
       "javascriptreact",
       "json",
+      "svg"
     },
   }, -- so prettier works only on these filetypes
 
