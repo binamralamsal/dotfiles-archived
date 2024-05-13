@@ -1,8 +1,7 @@
 workspace=$(hyprctl activewindow | grep "workspace: " | cut -d' ' -f2)
 
-if [ "$workspace" -eq -99 ]; then
-  # hyprctl dispatch movetoworkspace $(hyprctl monitors | grep active | awk '{print $3}')
+if [ "$workspace" -eq -98 ]; then
   hyprctl dispatch movetoworkspace e+0
 else
-  hyprctl dispatch movetoworkspace special
+  hyprctl dispatch movetoworkspace special:magic
 fi

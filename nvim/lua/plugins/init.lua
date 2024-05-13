@@ -16,14 +16,6 @@ require("lazy").setup("plugins.modules", {
 	install = {
 		missing = true,
 	},
-	checker = {
-		enabled = true,
-		notify = false,
-	},
-	change_detection = {
-		enabled = true,
-		notify = false,
-	},
 	performance = {
 		rtp = {
 			disabled_plugins = {

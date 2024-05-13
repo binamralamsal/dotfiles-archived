@@ -1,6 +1,6 @@
 #!/bin/bash
 
-iDIR="$HOME/.config/HyprV/mako/icons"
+iDIR="$HOME/.config/mako/icons"
 
 # Get Volume
 get_volume() {
@@ -17,7 +17,7 @@ get_icon() {
 		echo "$iDIR/volume-low.png"
 	elif [[ ("$current" -ge "30") && ("$current" -le "60") ]]; then
 		echo "$iDIR/volume-mid.png"
-	elif [[ ("$current" -ge "60") && ("$current" -le "100") ]]; then
+	elif [[ ("$current" -ge "60") && ("$current" -le "150") ]]; then
 		echo "$iDIR/volume-high.png"
 	fi
 }

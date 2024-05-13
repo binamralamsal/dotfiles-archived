@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-iDIR="$HOME/.config/HyprV/mako/icons"
+iDIR="$HOME/.config/mako/icons"
 
 # Get brightness
 get_backlight() {
@@ -12,15 +12,15 @@ get_backlight() {
 get_icon() {
 	backlight="$(brightnessctl g)"
 	current="${backlight%%%}"
-	if [[ ("$current" -ge "0") && ("$current" -le "52") ]]; then
+	if [[ ("$current" -ge "0") && ("$current" -le "300") ]]; then
 		icon="$iDIR/brightness-20.png"
-	elif [[ ("$current" -ge "52") && ("$current" -le "103") ]]; then
+	elif [[ ("$current" -ge "300") && ("$current" -le "600") ]]; then
 		icon="$iDIR/brightness-40.png"
-	elif [[ ("$current" -ge "103") && ("$current" -le "155") ]]; then
+	elif [[ ("$current" -ge "600") && ("$current" -le "900") ]]; then
 		icon="$iDIR/brightness-60.png"
-	elif [[ ("$current" -ge "155") && ("$current" -le "207") ]]; then
+	elif [[ ("$current" -ge "900") && ("$current" -le "1200") ]]; then
 		icon="$iDIR/brightness-80.png"
-	elif [[ ("$current" -ge "180") && ("$current" -le "255") ]]; then
+	elif [[ ("$current" -ge "1200") && ("$current" -le "1500") ]]; then
 		icon="$iDIR/brightness-100.png"
 	fi
 }
